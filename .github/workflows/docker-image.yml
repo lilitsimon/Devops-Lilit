@@ -36,3 +36,6 @@ jobs:
       - name: Run Docker Container
         run: |
           docker run -d -p 80:80 --name my-app ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+        
+      - name: Logout
+        run: docker logout
